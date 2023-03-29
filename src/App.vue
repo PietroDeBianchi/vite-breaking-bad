@@ -1,8 +1,17 @@
-<script>
+<template>
+    <MyHeader></MyHeader>
+</template>
 
+<script>
+import MyHeader from './components/MyHeader.vue';
+
+export default {
+    components: {
+        MyHeader
+    },
+}
 </script>
 
-<template></template>
 
 <style lang="scss">
 @use './styles/general.scss';
