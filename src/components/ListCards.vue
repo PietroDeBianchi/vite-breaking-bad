@@ -1,12 +1,14 @@
 <script>
-import { store } from '../store.js';
+import { store } from '../store';
+import SingleCard from './SingleCard.vue';
 export default {
-    name: "MyHeader",
+    name: "ListCards",
     components: {
+        SingleCard
     },
     data() {
         return {
-            store,
+            store
         }
     },
 }
