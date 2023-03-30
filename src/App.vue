@@ -1,25 +1,30 @@
-<template>
-    <MyHeader></MyHeader>
-</template>
-
 <script>
 import axios from 'axios';
-import { store } from './store.js';
+import { store } from './store';
 import MyHeader from './components/MyHeader.vue';
-import MyFilter from './components/MyFilter.vue';
+import Search from './components/Search.vue';
 import ListCards from './components/ListCards.vue';
 
 export default {
     components: {
         MyHeader,
-        MyFilter,
+        Search,
         ListCards,
     },
-
+    data() {
+        return {
+            store
+        }
+    },
 }
-
-
 </script>
+
+<template>
+    <MyHeader />
+    <Search />
+    <ListCards />
+    <SingleCard />
+</template>
 
 
 

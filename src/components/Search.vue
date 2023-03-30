@@ -1,7 +1,7 @@
 <script>
 import { store } from '../store';
 export default {
-    name: "MyFilter",
+    name: "Search",
     props: {
     },
     data() {
