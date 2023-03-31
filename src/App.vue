@@ -18,22 +18,30 @@ export default {
     },
     methods: {
         getCards() {
-            let urlApi = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?level=6';
+            let urlApi = 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
+            if (this.store.filterSelection.length > 0) {
+                urlApi += `?archetype=${this.store.filterSelection}`
+            }
             axios.get(urlApi).then(response => {
                 this.store.cardListApi = response.data.data;
-                this.store.loading = false;
             })
         },
+        getArchetype() {
+            axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php').then(response => {
+                this.store.archetypeListApi = response.data;
+            })
+        }
     },
     created() {
         this.getCards();
+        this.getArchetype();
     }
 }
 </script>
 
 <template>
     <AppHeader />
-    <AppSearch />
+    <AppSearch @selectArchetype="getCards()" />
     <main>
         <CharactersList />
     </main>
