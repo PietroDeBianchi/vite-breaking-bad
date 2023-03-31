@@ -10,10 +10,10 @@ export default {
 </script>
 
 <template>
-    <div class="card">
+    <div class="card text-center p-1">
         <img class="img-fluid" :src="image" alt="name" />
-        <h3>{{ name }}</h3>
-        <h4>{{ archetype }}</h4>
+        <h6>{{ name }}</h6>
+        <span>{{ archetype }}</span>
     </div>
 </template>
 

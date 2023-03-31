@@ -18,7 +18,7 @@ export default {
     },
     methods: {
         getCards() {
-            let urlApi = 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
+            let urlApi = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?level=6';
             if (this.store.filterSelection.length > 0) {
                 urlApi += `?archetype=${this.store.filterSelection}`
             }
