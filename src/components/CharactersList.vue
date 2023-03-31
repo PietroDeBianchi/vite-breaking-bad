@@ -1,0 +1,28 @@
+<script>
+import { store } from '../store';
+import CharacterCard from './CharacterCard.vue';
+
+export default {
+    name: 'Characterslist',
+    data() {
+        return {
+            store
+        }
+    },
+    components: {
+        CharacterCard
+    }
+}
+</script>
+
+<template>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 " v-for="(card, index) in store.cardListApi" :key="index">
+                <CharacterCard :image="card.card_images[0].image_url" :name="card.name" :archetype="card.archetype" />
+            </div>
+        </div>
+    </div>
+</template>
+
+<style scoped lang="scss"></style>

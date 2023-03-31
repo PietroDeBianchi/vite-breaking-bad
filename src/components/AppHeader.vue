@@ -1,14 +1,7 @@
 <script>
-import { store } from '../store';
 export default {
-    name: "MyHeader",
-    components: {
-    },
-    data() {
-        return {
-            store,
-        }
-    },
+    name: 'AppHeader',
+
 }
 </script>
 
@@ -18,6 +11,8 @@ export default {
         <h1>Yu-Gi-Oh Deck Game!</h1>
     </div>
 </template>
+
+
 
 <style scoped lang="scss">
 .logo {
