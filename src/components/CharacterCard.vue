@@ -4,7 +4,7 @@ export default {
     props: {
         image: String,
         name: String,
-        archetype: String
+        type: String
     }
 }
 </script>
@@ -13,7 +13,7 @@ export default {
     <div class="card text-center p-1">
         <img class="img-fluid" :src="image" alt="name" />
         <h6>{{ name }}</h6>
-        <span>{{ archetype }}</span>
+        <span>{{ type }}</span>
     </div>
 </template>
 

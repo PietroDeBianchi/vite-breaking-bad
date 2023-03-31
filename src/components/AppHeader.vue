@@ -6,7 +6,7 @@ export default {
 </script>
 
 <template>
-    <div class="container d-flex justify-content-center align-items-center p-2">
+    <div class="d-flex justify-content-center align-items-center m-0 w-100 p-2">
         <img src="../assets/Yugioh_Logo.webp" alt="Logo" class="logo">
         <h1>Yu-Gi-Oh Deck Game!</h1>
     </div>
@@ -15,6 +15,10 @@ export default {
 
 
 <style scoped lang="scss">
+div {
+    background-color: #CA9249;
+}
+
 .logo {
     width: 15%;
     margin-right: 12px;

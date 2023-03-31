@@ -27,22 +27,16 @@ export default {
                 this.store.loading = false;
             })
         },
-        getArchetype() {
-            axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php').then(response => {
-                this.store.archetypeListApi = response.data;
-            })
-        }
     },
     created() {
         this.getCards();
-        this.getArchetype();
     }
 }
 </script>
 
 <template>
     <AppHeader />
-    <AppSearch @SearchArchetype="getCards()" />
+    <AppSearch />
     <main>
         <CharactersList />
     </main>

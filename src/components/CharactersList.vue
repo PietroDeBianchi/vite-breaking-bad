@@ -19,7 +19,7 @@ export default {
     <div class="container">
         <div class="row">
             <div class="col-3 mb-2" v-for="(card, index) in store.cardListApi" :key="index">
-                <CharacterCard :image="card.card_images[0].image_url" :name="card.name" :archetype="card.archetype" />
+                <CharacterCard :image="card.card_images[0].image_url" :name="card.name" :type="card.type" />
             </div>
         </div>
     </div>
